@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "age": 32,
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "age": 25,
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "name": "Michael Johnson",
+      "age": 41,
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "name": "Emily Brown",
+      "age": 28,
+      "role": "user"
+    },
+    {
+      "id": "5",
+      "name": "David Wilson",
+      "age": 35,
+      "role": "admin"
+    },
+    {
+      "id": "6",
+      "name": "Jessica Martinez",
+      "age": 30,
+      "role": "user"
+    },
+    {
+      "id": "8",
+      "name": "Sarah Anderson",
+      "age": 23,
+      "role": "admin"
+    },
+    {
+      "id": "11",
+      "name": "Matthew Hernandez",
+      "age": 26,
+      "role": "admin"
+    },
+    {
+      "id": "14",
+      "name": "Jennifer Lee",
+      "age": 27,
+      "role": "admin"
+    },
+    {
+      "id": "17",
+      "name": "Kevin Young",
+      "age": 39,
+      "role": "admin"
+    },
+    {
+      "id": 221,
+      "name": "Belal",
+      "age": 23,
+      "role": "admin"
+    },
+    {
+      "id": 375,
+      "name": "Ahmed",
+      "age": 28,
+      "role": "user"
+    }
+  ]
+}

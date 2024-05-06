@@ -1,31 +1,37 @@
 <template>
 	<div class="mt-5 d-flex justify-content-center align-items-center gap-5">
-		<button class="btn btn-lg btn-primary">Users</button>
-		<button class="btn btn-lg btn-primary">Admin</button>
+		<button class="btn btn-lg btn-primary" @click="filterUsers('user')">Users</button>
+		<button class="btn btn-lg btn-primary" @click="filterUsers('admin')">Admin</button>
 	</div>
-	<table class="table mt-5">
-		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">Name</th>
-				<th scope="col">Age</th>
-				<th scope="col">Role</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>29</td>
-				<td>Admin</td>
-			</tr>
-		</tbody>
-	</table>
+	<component :is="UserComponent" />
 </template>
 
 <script>
+import Users from '../../mixins/Users';
+import AdminsTableComponent from './AdminsTable.vue';
+import UsersTableComponent from './UsersTable.vue';
 export default {
 	name: 'UsersDetailsComponent',
+	components: { UsersTableComponent, AdminsTableComponent },
+	data() {
+		return {
+			UserComponent: UsersTableComponent,
+		};
+	},
+	mixins: [Users],
+	provide() {
+		return {
+			handleDelete: this.handleDelete,
+		};
+	},
+	methods: {
+		async handleDelete(id) {
+			await this.deleteUser(id);
+		},
+		filterUsers(role) {
+			this.UserComponent = role === 'user' ? UsersTableComponent : AdminsTableComponent;
+		},
+	},
 };
 </script>
 
